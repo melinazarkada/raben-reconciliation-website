@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raben Reconciliation | Operations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="topbar">
+        <div class="brand">
+          <a href="index.html" aria-label="Raben home"><img src="assets/raben-logo.jpg" alt="Raben logo" class="brand-logo"></a>
+          <div class="brand-title">Operations Entry</div>
+        </div>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html">Αρχική</a>
+          <a href="reconciliation.html">Reconciliation</a>
+          <a class="active" href="operations.html">Operations</a>
+          <a href="mydata.html">MyData</a>
+          <a href="integrations.html">Integrations</a>
+        </nav>
+        <a class="login-chip" href="index.html" aria-label="Σύνδεση χρήστη">
+          <span class="profile-icon" aria-hidden="true"></span>
+          <span>Σύνδεση</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-content">
+        <h1 class="page-title">Νέα Καταχώρηση Αποστολής</h1>
+
+        <div class="grid grid-2 section-grid">
+          <div class="card">
+            <form>
+              <div class="field">
+                <label for="shipment-id">Αριθμός αποστολής</label>
+                <input type="text" id="shipment-id" required>
+              </div>
+              <div class="field">
+                <label for="shipment-type">Τύπος</label>
+                <select id="shipment-type">
+                  <option>Groupage</option>
+                  <option>FTL</option>
+                  <option>LTL</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="client-name">Πελάτης</label>
+                <input type="text" id="client-name" required>
+              </div>
+              <div class="field">
+                <label for="client-vat">ΑΦΜ Πελάτη</label>
+                <input type="text" id="client-vat" pattern="[0-9]{9}" maxlength="9" placeholder="9 ψηφία" required>
+              </div>
+              <div class="field">
+                <label for="invoice-no">Αρ. Παραστατικού</label>
+                <input type="text" id="invoice-no" placeholder="π.χ. INV-2026-0877">
+              </div>
+              <div class="field">
+                <label for="shipment-date">Ημερομηνία</label>
+                <input type="date" id="shipment-date">
+              </div>
+              <div class="field">
+                <label for="shipment-cost">Κόστος (€)</label>
+                <input type="text" id="shipment-cost" inputmode="decimal">
+              </div>
+              <div class="field">
+                <label for="route">Δρομολόγιο</label>
+                <input type="text" id="route">
+              </div>
+              <div class="field">
+                <label for="notes">Σχόλια</label>
+                <textarea id="notes" rows="4"></textarea>
+              </div>
+              <button class="button primary">Καταχώρηση</button>
+            </form>
+          </div>
+
+          <div class="card">
+            <h3>Πρόσφατες καταχωρήσεις</h3>
+            <div class="table-wrapper table-block">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Αρ. Αποστολής</th>
+                    <th>Παραστατικό</th>
+                    <th>Πελάτης</th>
+                    <th>Τύπος</th>
+                    <th>Κόστος</th>
+                    <th>Κατάσταση</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>SHP-2026-0142</td>
+                    <td>INV-2026-0876</td>
+                    <td>ΦΑΓΕ Α.Ε.</td>
+                    <td>Groupage</td>
+                    <td>€ 1.240,00</td>
+                    <td><span class="status-pill info">Προς συμφωνία</span></td>
+                  </tr>
+                  <tr>
+                    <td>SHP-2026-0141</td>
+                    <td>INV-2026-0875</td>
+                    <td>ΔΕΗ Α.Ε.</td>
+                    <td>FTL</td>
+                    <td>€ 3.420,00</td>
+                    <td><span class="status-pill success">Συμφωνημένο</span></td>
+                  </tr>
+                  <tr>
+                    <td>SHP-2026-0140</td>
+                    <td>INV-2026-0874</td>
+                    <td>Cosmote Α.Ε.</td>
+                    <td>Groupage</td>
+                    <td>€ 890,00</td>
+                    <td><span class="status-pill info">Προς συμφωνία</span></td>
+                  </tr>
+                  <tr>
+                    <td>SHP-2026-0139</td>
+                    <td>INV-2026-0873</td>
+                    <td>ΕΛΒΑΛ Α.Ε.</td>
+                    <td>FTL</td>
+                    <td>€ 2.130,00</td>
+                    <td><span class="status-pill success">Συμφωνημένο</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Raben Logistics A.E
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

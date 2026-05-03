@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raben Reconciliation | Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="topbar">
+        <div class="brand">
+          <a href="index.html" aria-label="Raben home"><img src="assets/raben-logo.jpg" alt="Raben logo" class="brand-logo"></a>
+          <div class="brand-title">Reconciliation Dashboard</div>
+        </div>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html">Αρχική</a>
+          <a class="active" href="reconciliation.html">Reconciliation</a>
+          <a href="operations.html">Operations</a>
+          <a href="mydata.html">MyData</a>
+          <a href="integrations.html">Integrations</a>
+        </nav>
+        <a class="login-chip" href="index.html" aria-label="Σύνδεση χρήστη">
+          <span class="profile-icon" aria-hidden="true"></span>
+          <span>Σύνδεση</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-content">
+        <h1 class="page-title">Reconciliation Dashboard</h1>
+
+        <div class="kpi-grid section-block">
+          <div class="kpi-card">
+            <div class="kpi-value">47</div>
+            <div class="kpi-label">Συμφωνημένα παραστατικά</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-value">12</div>
+            <div class="kpi-label">Αποκλίνοντα</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-value">5</div>
+            <div class="kpi-label">Εκκρεμή</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-value">€ 8.420</div>
+            <div class="kpi-label">Σύνολο ποσού αποκλίσεων</div>
+          </div>
+        </div>
+
+        <div class="card section-block">
+          <form class="grid reconciliation-filters">
+            <div class="field">
+              <label for="period">Περίοδος</label>
+              <select id="period" name="period">
+                <option>Τελευταίες 30 ημέρες</option>
+                <option>Αυτόν τον μήνα</option>
+                <option>Τελευταίο τρίμηνο</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="amount">Ποσό</label>
+              <input id="amount" type="text" inputmode="decimal">
+            </div>
+            <div class="field">
+              <label for="counterparty">Αντισυμβαλλόμενος</label>
+              <input id="counterparty" type="text">
+            </div>
+            <div class="field search-action">
+              <button type="submit" class="button primary">Αναζήτηση</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="grid grid-2 section-grid">
+          <div class="card">
+            <h3>Παραστατικά</h3>
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Αρ. Παραστ.</th>
+                    <th>Πελάτης</th>
+                    <th>Κατάσταση</th>
+                    <th>Ποσό SAP</th>
+                    <th>Ποσό ΑΑΔΕ</th>
+                    <th>Ποσό WEBCON</th>
+                    <th>Διαφορά</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>INV-2026-0876</td>
+                    <td>ΦΑΓΕ Α.Ε.</td>
+                    <td><span class="status-pill warning">Αποκλίνον</span></td>
+                    <td>€ 1.240,00</td>
+                    <td>€ 1.290,00</td>
+                    <td>€ 1.240,00</td>
+                    <td>+ € 50,00</td>
+                  </tr>
+                  <tr>
+                    <td>INV-2026-0875</td>
+                    <td>ΔΕΗ Α.Ε.</td>
+                    <td><span class="status-pill success">Συμφωνημένο</span></td>
+                    <td>€ 3.420,00</td>
+                    <td>€ 3.420,00</td>
+                    <td>€ 3.420,00</td>
+                    <td>—</td>
+                  </tr>
+                  <tr>
+                    <td>INV-2026-0874</td>
+                    <td>Cosmote Α.Ε.</td>
+                    <td><span class="status-pill info">Εκκρεμές</span></td>
+                    <td>€ 890,00</td>
+                    <td>€ 890,00</td>
+                    <td>€ 890,00</td>
+                    <td>—</td>
+                  </tr>
+                  <tr>
+                    <td>INV-2026-0873</td>
+                    <td>ΕΛΒΑΛ Α.Ε.</td>
+                    <td><span class="status-pill success">Συμφωνημένο</span></td>
+                    <td>€ 2.130,00</td>
+                    <td>€ 2.130,00</td>
+                    <td>€ 2.130,00</td>
+                    <td>—</td>
+                  </tr>
+                  <tr>
+                    <td>INV-2026-0872</td>
+                    <td>Παπαστράτος Α.Β.Ε.Σ.</td>
+                    <td><span class="status-pill warning">Αποκλίνον</span></td>
+                    <td>€ 4.560,00</td>
+                    <td>€ 4.440,00</td>
+                    <td>€ 4.560,00</td>
+                    <td>− € 120,00</td>
+                  </tr>
+                  <tr>
+                    <td>INV-2026-0871</td>
+                    <td>Coca-Cola HBC</td>
+                    <td><span class="status-pill success">Συμφωνημένο</span></td>
+                    <td>€ 1.870,00</td>
+                    <td>€ 1.870,00</td>
+                    <td>€ 1.870,00</td>
+                    <td>—</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel" id="discrepancy-panel">
+            <h3>Διαχείριση Απόκλισης</h3>
+            <div class="panel-row">
+              <strong>Αρ. Παραστατικού:</strong>
+              <span>INV-2026-0876</span>
+            </div>
+            <div class="panel-row">
+              <strong>Πελάτης:</strong>
+              <span>ΦΑΓΕ Α.Ε. (ΑΦΜ 094061540)</span>
+            </div>
+            <div class="panel-row">
+              <strong>SAP Amount:</strong>
+              <span>€ 1.240,00</span>
+            </div>
+            <div class="panel-row">
+              <strong>ΑΑΔΕ Amount:</strong>
+              <span>€ 1.290,00</span>
+            </div>
+            <div class="panel-row">
+              <strong>WEBCON Amount:</strong>
+              <span>€ 1.240,00</span>
+            </div>
+            <div class="panel-row">
+              <strong>Διαφορά:</strong>
+              <span>+ € 50,00 (ΦΠΑ)</span>
+            </div>
+            <div class="field">
+              <label for="action">Ενέργεια</label>
+              <select id="action">
+                <option>Επιβεβαίωση</option>
+                <option>Αιτιολόγηση</option>
+                <option>Αναφορά στην ομάδα</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="comment">Αιτιολόγηση</label>
+              <textarea id="comment" rows="4"></textarea>
+            </div>
+            <button class="button primary">Αποθήκευση</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Raben Logistics A.E
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

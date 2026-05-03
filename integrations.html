@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raben Reconciliation | Integrations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="topbar">
+        <div class="brand">
+          <a href="index.html" aria-label="Raben home"><img src="assets/raben-logo.jpg" alt="Raben logo" class="brand-logo"></a>
+          <div class="brand-title">Integrations Status</div>
+        </div>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html">Αρχική</a>
+          <a href="reconciliation.html">Reconciliation</a>
+          <a href="operations.html">Operations</a>
+          <a href="mydata.html">MyData</a>
+          <a class="active" href="integrations.html">Integrations</a>
+        </nav>
+        <a class="login-chip" href="index.html" aria-label="Σύνδεση χρήστη">
+          <span class="profile-icon" aria-hidden="true"></span>
+          <span>Σύνδεση</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-content">
+        <h1 class="page-title">Integrations Status & Logs</h1>
+
+        <div class="grid grid-3 section-block">
+          <div class="card">
+            <div class="integration-card-header">
+              <div>
+                <h3>SAP</h3>
+              </div>
+              <span class="status-pill success">Online</span>
+            </div>
+            <p><strong>Last sync:</strong> 03/05/2026 09:42</p>
+          </div>
+          <div class="card">
+            <div class="integration-card-header">
+              <div>
+                <h3>WEBCON</h3>
+              </div>
+              <span class="status-pill success">Online</span>
+            </div>
+            <p><strong>Last sync:</strong> 03/05/2026 09:38</p>
+          </div>
+          <div class="card">
+            <div class="integration-card-header">
+              <div>
+                <h3>MyData</h3>
+              </div>
+              <span class="status-pill warning">Καθυστέρηση</span>
+            </div>
+            <p><strong>Last sync:</strong> 03/05/2026 08:15</p>
+          </div>
+        </div>
+
+        <div class="card section-block">
+          <div class="card-toolbar">
+            <div>
+              <h3>Logs Συστημάτων</h3>
+            </div>
+          </div>
+
+          <div id="log-panel" class="panel log-panel">
+            <div class="field">
+              <label for="log-service">Υπηρεσία</label>
+              <select id="log-service">
+                <option>SAP</option>
+                <option>WEBCON</option>
+                <option>MyData</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="log-level">Κατάσταση</label>
+              <select id="log-level">
+                <option>Όλα</option>
+                <option>Ενημέρωση</option>
+                <option>Προειδοποίηση</option>
+                <option>Σφάλμα</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="table-wrapper table-block">
+            <table>
+              <thead>
+                <tr>
+                  <th>Χρόνος</th>
+                  <th>Υπηρεσία</th>
+                  <th>Κατάσταση</th>
+                  <th>Μήνυμα</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>03/05/2026 09:42</td>
+                  <td>SAP</td>
+                  <td><span class="status-pill info">Ενημέρωση</span></td>
+                  <td>Συγχρονισμός 14 παραστατικών: επιτυχία</td>
+                </tr>
+                <tr>
+                  <td>03/05/2026 09:38</td>
+                  <td>WEBCON</td>
+                  <td><span class="status-pill info">Ενημέρωση</span></td>
+                  <td>Νέα ροή έγκρισης για INV-2026-0875</td>
+                </tr>
+                <tr>
+                  <td>03/05/2026 08:15</td>
+                  <td>MyData</td>
+                  <td><span class="status-pill warning">Προειδοποίηση</span></td>
+                  <td>Timeout κατά την υποβολή: επανάληψη σε 5'</td>
+                </tr>
+                <tr>
+                  <td>02/05/2026 18:02</td>
+                  <td>MyData</td>
+                  <td><span class="status-pill warning">Προειδοποίηση</span></td>
+                  <td>INV-2026-0871: λάθος ΑΦΜ: επιστροφή στον FD</td>
+                </tr>
+                <tr>
+                  <td>02/05/2026 17:50</td>
+                  <td>SAP</td>
+                  <td><span class="status-pill info">Ενημέρωση</span></td>
+                  <td>Εισαγωγή SHP-2026-0142: δημιουργία INV-2026-0876</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card section-block">
+          <div>
+            <h3>Ενέργειες χρηστών</h3>
+          </div>
+          <div class="table-wrapper table-block">
+            <table>
+              <thead>
+                <tr>
+                  <th>Χρόνος</th>
+                  <th>Χρήστης</th>
+                  <th>Ρόλος</th>
+                  <th>Ενέργεια</th>
+                  <th>Στοιχείο</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>03/05/2026 10:14</td>
+                  <td>m.papadopoulos</td>
+                  <td>Λογιστής</td>
+                  <td>Αιτιολόγηση απόκλισης ΦΠΑ</td>
+                  <td>INV-2026-0876</td>
+                </tr>
+                <tr>
+                  <td>03/05/2026 09:55</td>
+                  <td>a.zarkadas</td>
+                  <td>Finance Director</td>
+                  <td>Έγκριση παραστατικού</td>
+                  <td>INV-2026-0870</td>
+                </tr>
+                <tr>
+                  <td>03/05/2026 09:30</td>
+                  <td>n.georgiou</td>
+                  <td>Operations User</td>
+                  <td>Καταχώρηση αποστολής</td>
+                  <td>SHP-2026-0142</td>
+                </tr>
+                <tr>
+                  <td>02/05/2026 18:10</td>
+                  <td>a.zarkadas</td>
+                  <td>Finance Director</td>
+                  <td>Επιστροφή για διόρθωση</td>
+                  <td>INV-2026-0871</td>
+                </tr>
+                <tr>
+                  <td>02/05/2026 16:42</td>
+                  <td>s.admin</td>
+                  <td>IT Administrator</td>
+                  <td>Επανεκκίνηση connector MyData</td>
+                  <td>—</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Raben Logistics A.E
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

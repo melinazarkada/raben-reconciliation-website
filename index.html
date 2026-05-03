@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raben Reconciliation | Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="topbar">
+        <div class="brand">
+          <a href="index.html" aria-label="Raben home"><img src="assets/raben-logo.jpg" alt="Raben logo" class="brand-logo"></a>
+          <div class="brand-title">Raben Reconciliation</div>
+        </div>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a class="active" href="index.html">Αρχική</a>
+          <a href="reconciliation.html">Reconciliation</a>
+          <a href="operations.html">Operations</a>
+          <a href="mydata.html">MyData</a>
+          <a href="integrations.html">Integrations</a>
+        </nav>
+        <a class="login-chip" href="index.html" aria-label="Σύνδεση χρήστη">
+          <span class="profile-icon" aria-hidden="true"></span>
+          <span>Σύνδεση</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-content grid grid-2">
+        <div>
+          <h1 class="page-title">Καλώς ήρθατε στην Raben Logistics</h1>
+          <div class="card section-block">
+            <form id="login-form" novalidate>
+              <div class="field">
+                <label for="username">Όνομα χρήστη</label>
+                <input type="text" id="username" name="username" autocomplete="username">
+              </div>
+              <div class="field">
+                <label for="password">Κωδικός</label>
+                <input type="password" id="password" name="password" autocomplete="current-password">
+              </div>
+              <div class="field">
+                <label for="role">Ρόλος</label>
+                <select id="role" name="role">
+                  <option value="">Επιλέξτε ρόλο</option>
+                  <option value="Λογιστής">Λογιστής</option>
+                  <option value="Operations User">Operations User</option>
+                  <option value="Finance Director">Finance Director</option>
+                  <option value="IT Administrator">IT Administrator</option>
+                </select>
+              </div>
+              <div class="checkbox-group">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Να με θυμάσαι</label>
+              </div>
+              <button type="submit" class="button primary">Σύνδεση</button>
+              <p id="login-notice" class="form-notice" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+
+        <div class="quick-links">
+          <a class="quick-card" href="reconciliation.html">
+            <h4>Reconciliation Dashboard</h4>
+            <p>Επισκόπηση συμφωνιών και αποκλίσεων</p>
+          </a>
+          <a class="quick-card" href="operations.html">
+            <h4>Νέα Καταχώρηση Αποστολής</h4>
+            <p>Καταχώρηση νέων λειτουργικών δεδομένων</p>
+          </a>
+          <a class="quick-card" href="mydata.html">
+            <h4>MyData Έγκριση</h4>
+            <p>Έγκριση παραστατικών και υποβολή στην ΑΑΔΕ</p>
+          </a>
+          <a class="quick-card" href="integrations.html">
+            <h4>Integrations Status</h4>
+            <p>Παρακολούθηση ενσωματώσεων και logs</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Raben Logistics A.E
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

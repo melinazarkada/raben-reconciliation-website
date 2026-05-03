@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raben Reconciliation | MyData</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="topbar">
+        <div class="brand">
+          <a href="index.html" aria-label="Raben home"><img src="assets/raben-logo.jpg" alt="Raben logo" class="brand-logo"></a>
+          <div class="brand-title">MyData Approval</div>
+        </div>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="index.html">Αρχική</a>
+          <a href="reconciliation.html">Reconciliation</a>
+          <a href="operations.html">Operations</a>
+          <a class="active" href="mydata.html">MyData</a>
+          <a href="integrations.html">Integrations</a>
+        </nav>
+        <a class="login-chip" href="index.html" aria-label="Σύνδεση χρήστη">
+          <span class="profile-icon" aria-hidden="true"></span>
+          <span>Σύνδεση</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-content">
+        <h1 class="page-title">Έγκριση Παραστατικών MyData</h1>
+
+        <div class="card section-block">
+          <div class="card-toolbar">
+            <div>
+              <h3>Παραστατικά προς έγκριση</h3>
+            </div>
+            <div class="card-actions">
+              <button class="button secondary">Έγκριση</button>
+              <button class="button secondary">Απόρριψη</button>
+            </div>
+          </div>
+          <div class="table-wrapper table-block">
+            <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Αρ. Παραστ.</th>
+                  <th>Πελάτης</th>
+                  <th>ΑΦΜ</th>
+                  <th>Ποσό</th>
+                  <th>Συμμόρφωση</th>
+                  <th>Κατάσταση WEBCON</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>INV-2026-0875</td>
+                  <td>ΔΕΗ Α.Ε.</td>
+                  <td>090000045</td>
+                  <td>€ 3.420,00</td>
+                  <td><span class="status-pill success">Συμμορφωμένο</span></td>
+                  <td><span class="table-badge pending">Προς έγκριση</span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>INV-2026-0873</td>
+                  <td>ΕΛΒΑΛ Α.Ε.</td>
+                  <td>094061201</td>
+                  <td>€ 2.130,00</td>
+                  <td><span class="status-pill success">Συμμορφωμένο</span></td>
+                  <td><span class="table-badge pending">Προς έγκριση</span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>INV-2026-0872</td>
+                  <td>Παπαστράτος Α.Β.Ε.Σ.</td>
+                  <td>094019837</td>
+                  <td>€ 4.560,00</td>
+                  <td><span class="status-pill warning">Έλεγχος ΦΠΑ</span></td>
+                  <td><span class="table-badge pending">Προς έγκριση</span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>INV-2026-0871</td>
+                  <td>Coca-Cola HBC</td>
+                  <td>094277965</td>
+                  <td>€ 1.870,00</td>
+                  <td><span class="status-pill warning">Λάθος ΑΦΜ</span></td>
+                  <td><span class="table-badge rejected">Επιστροφή</span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>INV-2026-0870</td>
+                  <td>Όλυμπος Α.Ε.</td>
+                  <td>094003114</td>
+                  <td>€ 985,00</td>
+                  <td><span class="status-pill success">Συμμορφωμένο</span></td>
+                  <td><span class="table-badge approved">Εγκεκριμένο</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="grid grid-2 section-grid">
+          <div class="panel">
+            <h3>Αναλυτική προβολή</h3>
+            <div class="panel-row">
+              <strong>Αρ. Παραστ.:</strong>
+              <span>INV-2026-0875</span>
+            </div>
+            <div class="panel-row">
+              <strong>Πελάτης:</strong>
+              <span>ΔΕΗ Α.Ε. (ΑΦΜ 090000045)</span>
+            </div>
+            <div class="panel-row">
+              <strong>Ημερομηνία:</strong>
+              <span>28/04/2026</span>
+            </div>
+            <div class="panel-row">
+              <strong>Καθαρή αξία:</strong>
+              <span>€ 2.758,06</span>
+            </div>
+            <div class="panel-row">
+              <strong>ΦΠΑ (24%):</strong>
+              <span>€ 661,94</span>
+            </div>
+            <div class="panel-row">
+              <strong>Σύνολο:</strong>
+              <span>€ 3.420,00</span>
+            </div>
+            <div class="panel-row">
+              <strong>Αποστολή SAP:</strong>
+              <span>SHP-2026-0141</span>
+            </div>
+            <div class="panel-row">
+              <strong>Κατάσταση WEBCON:</strong>
+              <span><span class="table-badge pending">Προς έγκριση</span></span>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Υποβολή MyData</h3>
+            <div class="panel-row">
+              <strong>Επιλεγμένα:</strong>
+              <span>1 επιλεγμένο παραστατικό</span>
+            </div>
+            <div class="panel-row">
+              <strong>Σύνολο προς υποβολή:</strong>
+              <span>€ 3.420,00</span>
+            </div>
+            <button class="button primary">Υποβολή στην ΑΑΔΕ</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Raben Logistics A.E
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
